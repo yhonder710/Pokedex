@@ -1,0 +1,31 @@
+.sidebar {
+  background-color: indigo;
+  width: 80px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: 500ms;
+  position: relative;
+  border-right: 1px solid white;
+}
+
+.sidebar.on {
+  width: 200px;
+}
+
+
+.btnSidebar {
+  position: absolute;
+  right: calc(-15px);
+  top: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: indigo;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
