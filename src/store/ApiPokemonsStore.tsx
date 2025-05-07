@@ -14,7 +14,7 @@ export const useApiPokemonsStore = create<ApiPokemons>((set, get) => ({
   pokemosDetails: null,
 
   fetchPokemons: async (): Promise<PokeAPI> => {
-    const enpoint = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=20"
+    const enpoint = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=1"
     const response = await fetch(enpoint)
     const data: Promise<PokeAPI> = response.json()
     set({ pokemos: (await data).results })

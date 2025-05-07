@@ -1,13 +1,12 @@
-import { useQuery } from '@tanstack/react-query'
-import { useApiPokemonsStore } from '../../store/ApiPokemonsStore'
 import { Naybar } from '../organismo/Naybar'
 import './css/template.css'
+import { PokemonsList } from '../../intefaces/pageApi'
 
-export function HomeTemplate() {
-  const { fetchPokemonsList, pokemosDetails } = useApiPokemonsStore()
+interface Props {
+  pokemosDetails: PokemonsList[] | null
+}
 
-
-  const { } = useQuery({ queryKey: ['api pokemons fecth'], queryFn: fetchPokemonsList })
+export function HomeTemplate({ pokemosDetails }: Props) {
 
   return (
     <main className='mainPokemons'>
