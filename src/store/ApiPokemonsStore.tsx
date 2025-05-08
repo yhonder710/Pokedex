@@ -1,23 +1,34 @@
 import { create } from "zustand";
 import { PokeAPI, PokemonsList, Result } from "../intefaces/pageApi";
 
+
 interface ApiPokemons {
   pokemos: Result[]
-  pokemosDetails: PokemonsList[] | null
-  fetchPokemons: () => void
-  fetchPokemonsList: () => void
+  pokemosDetails: PokemonsList[]
+  fetchPokemons: (pageParam: number) => Promise<PokeAPI>
+  addPokemons: (newPokemons: PokemonsList[]) => void
+  fetchPokemonsList: () => Promise<PokemonsList[]>
   fetchPokemonDetails: (pokemonUrl: string) => Promise<PokemonsList>
 }
 
 export const useApiPokemonsStore = create<ApiPokemons>((set, get) => ({
   pokemos: [],
-  pokemosDetails: null,
-
-  fetchPokemons: async (): Promise<PokeAPI> => {
-    const enpoint = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=1"
-    const response = await fetch(enpoint)
-    const data: Promise<PokeAPI> = response.json()
+  pokemosDetails: [],
+  addPokemons: (newPokemons) => {
+    set((state) => ({
+      pokemosDetails: [...state.pokemosDetails, ...newPokemons]
+    }))
+  },
+  fetchPokemons: async (pageParam): Promise<PokeAPI> => {
+    const { fetchPokemonsList, addPokemons } = get()
+    const limit = 10
+    const offset = pageParam * limit
+    const endpoint = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
+    const response = await fetch(endpoint)
+    const data: Promise<PokeAPI> = await response.json()
     set({ pokemos: (await data).results })
+    const pokemones = await fetchPokemonsList()
+    addPokemons(pokemones)
     return data
   },
 
@@ -27,9 +38,7 @@ export const useApiPokemonsStore = create<ApiPokemons>((set, get) => ({
     return data;
   },
 
-  fetchPokemonsList: async (): Promise<PokemonsList[]> => {
-    await get().fetchPokemons()
-
+  fetchPokemonsList: async () => {
     const pokemonsUrl = await Promise.all(
       get().pokemos.map(async (url) => {
         const pokemonUrl = url.url
@@ -37,7 +46,6 @@ export const useApiPokemonsStore = create<ApiPokemons>((set, get) => ({
         return pokemonsDetails
       })
     )
-    set({ pokemosDetails: pokemonsUrl })
 
     return pokemonsUrl
   }

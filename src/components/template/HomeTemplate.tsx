@@ -4,19 +4,22 @@ import { PokemonsList } from '../../intefaces/pageApi'
 
 interface Props {
   pokemosDetails: PokemonsList[] | null
+  isFetching: boolean
 }
 
-export function HomeTemplate({ pokemosDetails }: Props) {
+export function HomeTemplate({ pokemosDetails, isFetching }: Props) {
 
   return (
     <main className='mainPokemons'>
       <Naybar />
       {
-        pokemosDetails?.map(pokemons => {
-          return (
-            <img key={pokemons.id} src={pokemons.sprites.front_default} alt="" />
-          )
-        })
+        isFetching
+          ? <p>cargando</p>
+          : pokemosDetails?.map(pokemons => {
+            return (
+              <img key={pokemons.id} src={pokemons.sprites.front_default} alt="" />
+            )
+          })
       }
     </main>
   )
