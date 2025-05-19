@@ -1,23 +1,18 @@
 import { MyRouter } from "./router/router"
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      refetchOnWindowFocus: false,
-      staleTime: Infinity
-    }
-  }
-})
+import { useEffect } from "react";
+import { useThemeStore } from "./store/ThemeStore";
+
+
 
 function App() {
+  const { theme } = useThemeStore()
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <MyRouter />
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
+    <MyRouter />
   )
 }
 
