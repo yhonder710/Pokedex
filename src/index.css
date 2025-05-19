@@ -19,7 +19,7 @@ h5 {
 }
 
 .light {
-  --bg-color: #DED6D6;
+  --bg-color: #F3F3F3;
   --text-color: #333333;
   background-color: var(--bg-color);
   color: var(--text-color);
