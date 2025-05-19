@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
-import { Sidebar } from "./Sidebar";
+import { Naybar } from "./Naybar";
 
 
 export function Layout() {
   return (
     <div className="Layout">
-      <Sidebar />
+      <Naybar />
       <Outlet />
     </div>
   )
