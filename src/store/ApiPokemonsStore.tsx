@@ -11,8 +11,7 @@ interface ApiPokemons {
   fetchPokemonDetails: (pokemonUrl: string) => Promise<PokemonsList>
 
   buscador: string
-  pokemonBuscado: PokemonsList | null
-  buscardorPokemons: (buscador: string) => void
+  buscardorPokemons: (buscador: string) => Promise<PokemonsList>
   setBuscador: (newValue: string) => void
 }
 
@@ -55,17 +54,11 @@ export const useApiPokemonsStore = create<ApiPokemons>((set, get) => ({
   },
 
   buscador: "",
-  pokemonBuscado: null,
   setBuscador: (newValue) => set({ buscador: newValue }),
-  buscardorPokemons: async (buscador) => {
+  buscardorPokemons: async (buscador): Promise<PokemonsList> => {
     const endpoint = `https://pokeapi.co/api/v2/pokemon/${buscador}`
-    try {
-      const response = await fetch(endpoint)
-      const data: PokemonsList = await response.json()
-      set({ pokemonBuscado: data })
-      return data
-    } catch (error) {
-      set({ pokemonBuscado: null })
-    }
+    const response = await fetch(endpoint)
+    const data: PokemonsList = await response.json()
+    return data
   },
 }))

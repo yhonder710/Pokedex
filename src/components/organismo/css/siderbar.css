@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: #171717;
+  background-color: var(--bg-color);
   width: 80px;
   height: 100vh;
   display: flex;
@@ -21,13 +21,14 @@
   right: calc(-20px);
   height: 35px;
   top: 50%;
-  color: #fff;
+  color: #53388D;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  background-color: #171717;
-  border: 2px solid white;
+  background-color: var(--bg-color);
+  border: 2px solid #53388D;
   border-radius: 5px;
   cursor: pointer;
+  transition: 500ms;
 }

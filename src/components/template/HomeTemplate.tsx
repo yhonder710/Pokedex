@@ -7,7 +7,7 @@ import { useApiPokemonsStore } from '../../store/ApiPokemonsStore'
 
 
 export function HomeTemplate() {
-  const { buscardorPokemons, buscador, pokemonBuscado } = useApiPokemonsStore()
+  const { buscardorPokemons, buscador } = useApiPokemonsStore()
 
   const { data } = useQuery({ queryKey: ['buscador de pokemons', buscador], queryFn: () => buscardorPokemons(buscador.toLowerCase()) })
 
