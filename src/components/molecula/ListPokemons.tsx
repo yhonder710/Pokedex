@@ -5,6 +5,7 @@ import { useApiPokemonsStore } from "../../store/ApiPokemonsStore";
 export function ListPokemons() {
   const { fetchPokemons, pokemosDetails } = useApiPokemonsStore()
 
+
   const { fetchNextPage, isFetchingNextPage, hasNextPage } = useInfiniteQuery({
     queryKey: ['pokemons'],
     queryFn: ({ pageParam = 0 }) => fetchPokemons(pageParam),
@@ -16,7 +17,7 @@ export function ListPokemons() {
   })
 
   return (
-    < >
+    <>
       <section>
         {
           pokemosDetails?.map(pokemons => {

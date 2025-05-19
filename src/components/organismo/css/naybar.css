@@ -4,4 +4,11 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.title {
+  color: #5E39B1;
+  font-size: 2rem;
+  font-weight: bold;
 }

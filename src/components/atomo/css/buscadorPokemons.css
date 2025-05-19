@@ -1,0 +1,37 @@
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  input {
+    width: 280px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: transparent;
+    border: 2px solid #5E39B1;
+    outline: none;
+
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
+  }
+
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 5px;
+    color: #5E39B1;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+}

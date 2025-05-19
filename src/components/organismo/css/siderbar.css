@@ -1,5 +1,5 @@
 .sidebar {
-  background-color: indigo;
+  background-color: #171717;
   width: 80px;
   height: 100vh;
   display: flex;
@@ -7,7 +7,8 @@
   flex-direction: column;
   transition: 500ms;
   position: relative;
-  border-right: 1px solid white;
+  border-right: 2px solid #53388D;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 }
 
 .sidebar.on {
@@ -17,15 +18,16 @@
 
 .btnSidebar {
   position: absolute;
-  right: calc(-15px);
+  right: calc(-20px);
+  height: 35px;
   top: 50%;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  background-color: indigo;
-  border: 1px solid white;
+  background-color: #171717;
+  border: 2px solid white;
   border-radius: 5px;
   cursor: pointer;
 }
