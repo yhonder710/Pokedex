@@ -27,7 +27,7 @@ export const useApiPokemonsStore = create<ApiPokemons>((set, get) => ({
 
   fetchPokemons: async (pageParam): Promise<PokeAPI> => {
     const { fetchPokemonsList, addPokemons } = get()
-    const limit = 10
+    const limit = 1
     const offset = pageParam * limit
     const endpoint = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
     const response = await fetch(endpoint)
