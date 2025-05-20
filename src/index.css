@@ -19,7 +19,7 @@ h5 {
 }
 
 .light {
-  --bg-color: #F3F3F3;
+  --bg-color: #e2e2e2;
   --text-color: #333333;
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -36,11 +36,15 @@ h5 {
 body {
   margin: 0;
   background-color: var(--bg-color);
-  transition: 500ms;
+  transition: 300ms;
   overflow-x: hidden;
 }
 
 
 .Layout {
   margin: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

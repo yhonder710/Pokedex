@@ -1,0 +1,27 @@
+.btnTema {
+  width: 85px;
+  display: flex;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  border: 2px solid #5E39B1;
+  background-color: transparent;
+  padding: 2px 4px;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  transform: translateX(0px);
+  color: #5E39B1;
+  transition: 500ms;
+
+}
+
+.icon.on {
+  transform: translateX(48px);
+  color: #5E39B1;
+  transition: 500ms;
+
+}
