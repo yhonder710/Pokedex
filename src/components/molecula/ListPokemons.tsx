@@ -1,8 +1,7 @@
+import './css/listPokemos.css'
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { useApiPokemonsStore } from "../../store/ApiPokemonsStore";
 import { MapPokemons } from "../atomo/mapPokemons";
-
-
 
 
 export function ListPokemons() {
@@ -21,7 +20,7 @@ export function ListPokemons() {
 
   return (
     <>
-      <section>
+      <section className="listPokemons">
         <MapPokemons pokemosDetails={pokemosDetails} />
       </section>
       <button disabled={!hasNextPage || isFetchingNextPage} onClick={() => fetchNextPage()}>cargar mas</button >

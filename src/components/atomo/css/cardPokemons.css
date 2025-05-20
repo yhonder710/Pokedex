@@ -1,0 +1,65 @@
+.cardPokemons {
+  width: 200px;
+  height: 260px;
+  background-color: transparent;
+  border: 4px solid #5E39B1;
+  border-radius: 15px;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  img {
+    width: 150px;
+    height: 150px;
+  }
+
+  h3 {
+    margin: 0;
+    color: #5E39B1;
+    font-weight: bold;
+  }
+
+  footer {
+    height: 20px;
+  }
+
+  .cardInfor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 20px;
+    color: #5E39B1;
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .cardId {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+  }
+
+  .pokebola {
+    font-size: 1.5rem;
+    color: #5E39B1;
+  }
+
+  .btnFavoritos {
+    background-color: transparent;
+    color: #5E39B1;
+    border: none;
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inconFavorito {
+      cursor: pointer;
+    }
+  }
+}

@@ -17,7 +17,7 @@ form {
     outline: none;
     color: var(--text-color);
     background-color: var(--bg-color);
-    transition: 500ms;
+    transition: 300ms;
 
     &:focus {
       &::placeholder {

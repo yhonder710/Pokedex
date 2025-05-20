@@ -1,0 +1,9 @@
+.listPokemons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  gap: 20px;
+}

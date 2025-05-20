@@ -3,6 +3,8 @@ import { ListPokemons } from '../molecula/ListPokemons'
 import './css/template.css'
 import { useApiPokemonsStore } from '../../store/ApiPokemonsStore'
 import { FavoritosPokemon } from '../organismo/FavoritosPokemon'
+import { CardPokemons } from '../atomo/CardPokemons'
+
 
 
 
@@ -14,8 +16,8 @@ export function HomeTemplate() {
 
   return (
     <main className='mainPokemons'>
-      {buscador.length > 0 ? <img src={data?.sprites.other?.dream_world.front_default} alt="" /> : <ListPokemons />}
       <FavoritosPokemon />
+      {buscador.length > 0 ? <CardPokemons pokemons={data} /> : <ListPokemons />}
     </main>
   )
 }
