@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './css/favoritosPokemon.css'
+import { NavFavoritos } from '../atomo/NavFavoritos'
 
 export function FavoritosPokemon() {
 
@@ -13,8 +14,7 @@ export function FavoritosPokemon() {
     <article className={classFavorito}>
       <div className='boxFavoritos'>
         <button className='botonAbrir botonColor ' onClick={handleClick}>Abrir</button>
-        <h3>Favoritos</h3>
-        <p>hola</p>
+        <NavFavoritos />
       </div>
     </article>
   )
