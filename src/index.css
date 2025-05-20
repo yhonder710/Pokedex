@@ -35,9 +35,9 @@ h5 {
 
 body {
   margin: 0;
-  overflow: hidden;
   background-color: var(--bg-color);
   transition: 500ms;
+  overflow-x: hidden;
 }
 
 
