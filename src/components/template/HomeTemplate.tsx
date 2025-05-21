@@ -14,7 +14,7 @@ import { SeccionBusqueda } from '../molecula/SeccionBusqueda'
 export function HomeTemplate() {
   const { buscardorPokemons, buscador } = useApiPokemonsStore()
 
-  const { } = useQuery({ queryKey: ['buscador de pokemons', buscador], queryFn: () => buscardorPokemons(buscador.toLowerCase()) })
+  const { data } = useQuery({ queryKey: ['buscador de pokemons', buscador], queryFn: () => buscardorPokemons(buscador.toLowerCase()) })
 
 
   return (
