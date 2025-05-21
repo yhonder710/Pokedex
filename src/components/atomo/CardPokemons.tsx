@@ -1,7 +1,7 @@
 import './css/cardPokemons.css'
 import { PokemonsList } from "../../intefaces/pageApi";
 import { TbPokeball } from "react-icons/tb";
-import { FaRegHeart } from "react-icons/fa";
+import { Heart } from './Heart';
 
 
 
@@ -15,7 +15,7 @@ export function CardPokemons({ pokemons }: Props) {
     <article className='cardPokemons'>
       <header className='cardInfor'>
         <span className='cardId'><TbPokeball className='pokebola' /> {pokemons?.id}</span>
-        <button className='btnFavoritos'><FaRegHeart className='inconFavorito' /></button>
+        <Heart />
       </header>
       <img key={pokemons?.id} src={pokemons?.sprites.other?.dream_world.front_default} alt="img pokemon" />
       <footer>

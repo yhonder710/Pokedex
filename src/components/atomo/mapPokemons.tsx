@@ -11,7 +11,7 @@ export function MapPokemons({ pokemosDetails }: Props) {
       {
         pokemosDetails?.map(pokemons => {
           return (
-            <CardPokemons pokemons={pokemons} />
+            <CardPokemons key={pokemons.id} pokemons={pokemons} />
           )
         })
       }

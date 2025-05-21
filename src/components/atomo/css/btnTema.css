@@ -13,15 +13,13 @@
 .icon {
   display: flex;
   align-items: center;
-  transform: translateX(0px);
+  transform: translateX(48px);
   color: #5E39B1;
-  transition: 500ms;
+  transition: 300ms;
 
 }
 
 .icon.on {
-  transform: translateX(48px);
+  transform: translateX(0px);
   color: #5E39B1;
-  transition: 500ms;
-
 }

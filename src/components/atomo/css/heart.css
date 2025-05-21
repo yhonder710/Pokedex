@@ -1,0 +1,13 @@
+.btnFavoritos {
+  background-color: transparent;
+  color: #5E39B1;
+  border: none;
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .inconFavorito {
+    cursor: pointer;
+  }
+}
