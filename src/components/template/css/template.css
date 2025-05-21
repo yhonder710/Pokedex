@@ -5,3 +5,7 @@
   padding-right: 15px;
 
 }
+
+.buscadorPokemon {
+  display: flex;
+}

@@ -4,6 +4,10 @@ import './css/template.css'
 import { useApiPokemonsStore } from '../../store/ApiPokemonsStore'
 import { FavoritosPokemon } from '../organismo/FavoritosPokemon'
 
+import { SeccionBusqueda } from '../molecula/SeccionBusqueda'
+
+
+
 
 
 
@@ -16,6 +20,7 @@ export function HomeTemplate() {
   return (
     <main className='mainPokemons'>
       <FavoritosPokemon />
+      {buscador.length > 0 ? <SeccionBusqueda data={data} /> : ''}
       <ListPokemons />
     </main>
   )

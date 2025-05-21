@@ -1,0 +1,11 @@
+.boxBusqueda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.resultado {
+  font-weight: bold;
+  color: #5E39B1;
+}
