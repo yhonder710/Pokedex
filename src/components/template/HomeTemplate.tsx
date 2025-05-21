@@ -3,7 +3,7 @@ import { ListPokemons } from '../molecula/ListPokemons'
 import './css/template.css'
 import { useApiPokemonsStore } from '../../store/ApiPokemonsStore'
 import { FavoritosPokemon } from '../organismo/FavoritosPokemon'
-import { CardPokemons } from '../atomo/CardPokemons'
+import { SeccionBusqueda } from '../molecula/SeccionBusqueda'
 
 
 
@@ -17,7 +17,8 @@ export function HomeTemplate() {
   return (
     <main className='mainPokemons'>
       <FavoritosPokemon />
-      {buscador.length > 0 ? <CardPokemons pokemons={data} /> : <ListPokemons />}
+      {buscador.length > 0 ? <SeccionBusqueda data={data} /> : ''}
+      <ListPokemons />
     </main>
   )
 }
