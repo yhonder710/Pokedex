@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { PokeAPI, PokemonsList, Result } from "../intefaces/pageApi";
+import { PokeAPI, PokemonsList, Result } from "../interfaces/pageApi";
 
 
 interface ApiPokemons {
