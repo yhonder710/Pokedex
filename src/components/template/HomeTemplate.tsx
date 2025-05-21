@@ -10,7 +10,7 @@ import { FavoritosPokemon } from '../organismo/FavoritosPokemon'
 export function HomeTemplate() {
   const { buscardorPokemons, buscador } = useApiPokemonsStore()
 
-  const { data } = useQuery({ queryKey: ['buscador de pokemons', buscador], queryFn: () => buscardorPokemons(buscador.toLowerCase()) })
+  const { } = useQuery({ queryKey: ['buscador de pokemons', buscador], queryFn: () => buscardorPokemons(buscador.toLowerCase()) })
 
 
   return (
