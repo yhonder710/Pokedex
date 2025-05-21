@@ -3,7 +3,10 @@ import { ListPokemons } from '../molecula/ListPokemons'
 import './css/template.css'
 import { useApiPokemonsStore } from '../../store/ApiPokemonsStore'
 import { FavoritosPokemon } from '../organismo/FavoritosPokemon'
+
 import { SeccionBusqueda } from '../molecula/SeccionBusqueda'
+
+
 
 
 
@@ -11,7 +14,7 @@ import { SeccionBusqueda } from '../molecula/SeccionBusqueda'
 export function HomeTemplate() {
   const { buscardorPokemons, buscador } = useApiPokemonsStore()
 
-  const { data } = useQuery({ queryKey: ['buscador de pokemons', buscador], queryFn: () => buscardorPokemons(buscador.toLowerCase()) })
+  const { } = useQuery({ queryKey: ['buscador de pokemons', buscador], queryFn: () => buscardorPokemons(buscador.toLowerCase()) })
 
 
   return (

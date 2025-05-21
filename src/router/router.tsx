@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import { Home } from "../page/Home"
+import { Home } from "../pages/Home"
 import { Layout } from "../components/organismo/Layout"
 
 export const MyRouter = () => {

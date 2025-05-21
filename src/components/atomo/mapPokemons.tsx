@@ -1,4 +1,4 @@
-import { PokemonsList } from "../../intefaces/pageApi";
+import { PokemonsList } from "../../interfaces/pageApi";
 import { CardPokemons } from "./CardPokemons";
 
 interface Props {
@@ -10,6 +10,7 @@ export function MapPokemons({ pokemosDetails }: Props) {
     <>
       {
         pokemosDetails?.map(pokemons => {
+
           return (
             <CardPokemons key={pokemons.id} pokemons={pokemons} />
           )
