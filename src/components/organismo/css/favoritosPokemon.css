@@ -48,6 +48,16 @@
   scale: 1.1;
 }
 
+.boxPokemon {
+  padding: 10px 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
 /* #CC7722 color oscreeee */
 
 /* C0C0C0 color fondo platica */

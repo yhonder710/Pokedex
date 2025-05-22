@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './css/favoritosPokemon.css'
 import { NavFavoritos } from '../atomo/NavFavoritos'
+import { PokemonsFavoritosStore } from '../../store/PokemonsFavoritosStore'
+import { CardsFavorito } from '../molecula/CardsFavorito'
 
 export function FavoritosPokemon() {
 
@@ -9,12 +11,22 @@ export function FavoritosPokemon() {
   const handleClick = () => {
     setBoxFavoritos(!boxFavoritos)
   }
+  const { favorites } = PokemonsFavoritosStore()
 
   return (
     <article className={classFavorito}>
       <div className='boxFavoritos'>
         <button className='botonAbrir botonColor ' onClick={handleClick}>Abrir</button>
         <NavFavoritos />
+        <section className='boxPokemon'>
+          {
+            favorites.map(pokemonesFavoritos => {
+              return (
+                <CardsFavorito key={pokemonesFavoritos.id} pokemons={pokemonesFavoritos} />
+              )
+            })
+          }
+        </section>
       </div>
     </article>
   )

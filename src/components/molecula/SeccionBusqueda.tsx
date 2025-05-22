@@ -1,10 +1,10 @@
-import { PokemonsList } from "../../intefaces/pageApi";
+import { PokemonsList } from "../../interfaces/pageApi";
 import { useApiPokemonsStore } from "../../store/ApiPokemonsStore";
 import { CardsBusqueda } from "./CardsBusqueda";
 import './css/seccionBusqueda.css'
 
 interface buscadorInterface {
-  data: PokemonsList | undefined
+  data: PokemonsList
 }
 
 export function SeccionBusqueda({ data }: buscadorInterface) {
