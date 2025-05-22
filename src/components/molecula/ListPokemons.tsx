@@ -9,7 +9,7 @@ import { BounceLoader } from "react-spinners";
 export function ListPokemons() {
   const { fetchPokemons, pokemosDetails } = useApiPokemonsStore()
 
-  const { fetchNextPage } = useInfiniteQuery({
+  const { fetchNextPage, } = useInfiniteQuery({
     queryKey: ['pokemons'],
     queryFn: ({ pageParam = 0 }) => fetchPokemons(pageParam),
     getNextPageParam: (lastPage, allPages) => {
@@ -26,6 +26,7 @@ export function ListPokemons() {
       fetchNextPage()
     }
   }, [inView])
+
 
 
   return (

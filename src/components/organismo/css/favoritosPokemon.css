@@ -3,6 +3,7 @@
   top: 20%;
   right: calc(-300px);
   transition: 500ms;
+  z-index: 10;
 }
 
 .favoritos.on {
@@ -26,12 +27,9 @@
   width: 90px;
   position: absolute;
   top: 50%;
-  left: calc(-59px);
+  left: calc(-62px);
   rotate: -90deg;
   border-color: #53388D;
-}
-
-.botonColor {
   background-color: #53388D;
   border: none;
   color: white;
@@ -41,11 +39,13 @@
   cursor: pointer;
   border-radius: 15px 15px 1px 1px;
   transition: 0.3s;
+  scale: 1.1;
+  font-size: 1.1rem;
 }
 
-.botonColor:hover {
+
+.botonAbrir:hover {
   background-color: #520ca1;
-  scale: 1.1;
 }
 
 .boxPokemon {
@@ -56,6 +56,7 @@
   gap: 10px;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 /* #CC7722 color oscreeee */

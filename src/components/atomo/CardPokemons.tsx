@@ -11,13 +11,14 @@ interface Props {
 export function CardPokemons({ pokemons }: Props) {
   const { handleFavoriteClick, like } = useFavoritos(pokemons)
 
+
   return (
     <article className='cardPokemons'>
       <header className='cardInfor'>
         <span className='cardId'><TbPokeball className='pokebola' /> {pokemons?.id}</span>
         <Heart like={like} functionPokemons={() => handleFavoriteClick(pokemons)} />
       </header>
-      <img key={pokemons?.id} src={pokemons?.sprites.other?.dream_world.front_default} alt="img pokemon" />
+      <img key={pokemons?.id} src={pokemons?.sprites.other?.['official-artwork'].front_default} alt="img pokemon" />
       <footer>
         <h3>{pokemons?.name}</h3>
       </footer>

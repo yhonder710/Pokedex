@@ -7,6 +7,7 @@ interface Favoritos {
   favoriteCount: number
   addFavorites: (p: PokemonsList) => void
   removerFavoritos: (p: number) => void
+  clearFavorite: () => void
 }
 
 export const PokemonsFavoritosStore = create(
@@ -25,7 +26,7 @@ export const PokemonsFavoritosStore = create(
       ,
       clearFavorite: () => set(() => ({
         favorites: [],
-        favoriteCoun: 0
+        favoriteCount: 0
       }))
 
     }),

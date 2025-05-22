@@ -48,3 +48,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+img {
+  filter: saturate(2.3);
+}

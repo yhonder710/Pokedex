@@ -16,7 +16,7 @@ export function FavoritosPokemon() {
   return (
     <article className={classFavorito}>
       <div className='boxFavoritos'>
-        <button className='botonAbrir botonColor ' onClick={handleClick}>Abrir</button>
+        <button className='botonAbrir' onClick={handleClick}>Favoritos</button>
         <NavFavoritos />
         <section className='boxPokemon'>
           {
