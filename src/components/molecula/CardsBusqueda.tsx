@@ -1,8 +1,8 @@
 import { TbPokeball } from "react-icons/tb";
-import { Heart } from '../atomo/Heart';
 import './css/cardsBusqueda.css'
-import { useFavoritos } from "../../hooks/logicaFavoritos";
 import { PokemonsList } from "../../interfaces/pageApi";
+import { useFavoritos } from "../../hooks/logicaFavoritos";
+import { Heart } from "../atomo/Heart";
 
 
 interface Props {

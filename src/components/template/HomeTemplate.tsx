@@ -13,13 +13,14 @@ import { SeccionBusqueda } from '../molecula/SeccionBusqueda'
 
 export function HomeTemplate() {
   const { buscardorPokemons, buscador } = useApiPokemonsStore()
-  const { data } = useQuery({ queryKey: ['buscador de pokemons', buscador], queryFn: () => buscardorPokemons(buscador.toLowerCase()) })
-
+  const { data, isSuccess, isFetching, isError } = useQuery({ queryKey: ['buscador de pokemons', buscador], queryFn: () => buscardorPokemons(buscador.toLowerCase()) })
 
   return (
     <main className='mainPokemons'>
       <FavoritosPokemon />
-      {buscador.length > 0 ? <SeccionBusqueda data={data} /> : ''}
+      {isFetching ? <p className='message'>cargando...</p> : ''}
+      {isError ? <p className='message'>No se a encontrado ese pokemon</p> : ''}
+      {buscador.length > 0 && isSuccess ? <SeccionBusqueda data={data} /> : ''}
       <ListPokemons />
     </main>
   )
