@@ -5,12 +5,6 @@ import { useApiPokemonsStore } from '../../store/ApiPokemonsStore'
 import { FavoritosPokemon } from '../organismo/FavoritosPokemon'
 import { SeccionBusqueda } from '../molecula/SeccionBusqueda'
 
-
-
-
-
-
-
 export function HomeTemplate() {
   const { buscardorPokemons, buscador } = useApiPokemonsStore()
   const { data, isSuccess, isFetching, isError } = useQuery({ queryKey: ['buscador de pokemons', buscador], queryFn: () => buscardorPokemons(buscador.toLowerCase()) })

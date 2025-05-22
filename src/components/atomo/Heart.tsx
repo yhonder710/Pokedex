@@ -14,7 +14,7 @@ export function Heart({ functionPokemons, like }: Props) {
   }
 
   return (
-    <button onClick={handleClick} className='btnFavoritos'>
+    <button aria-label="boton favorito" onClick={handleClick} className='btnFavoritos'>
       {like ? <FaHeart className='inconFavorito' /> : <FaRegHeart className='inconFavorito' />}
     </button>
   );

@@ -30,7 +30,7 @@ export function BuscardorPokemons() {
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" name='pokemons' onChange={handleChange} value={input} placeholder="Busca tu pokemon favorito" />
-      <button className='buscar'><FaSearch /></button>
+      <button aria-label="Buscar Pokémon" className='buscar'><FaSearch size={48} /></button>
       {buscador.length > 0 ? <button onClick={handleReset} className='close'><IoIosCloseCircle /></button> : ''}
     </form>
   );

@@ -8,7 +8,7 @@ export function BtnTema() {
   const { theme, toggleTheme } = useThemeStore()
 
   return (
-    <button onClick={toggleTheme} className="btnTema">
+    <button aria-label="cambiar tema oscuro y claro" onClick={toggleTheme} className="btnTema">
       {theme === 'light'
         ? <span className='icon on'><FaMoon /></span>
         : <span className='icon'><FaSun /></span>}

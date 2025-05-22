@@ -28,16 +28,17 @@ form {
 
 
   .buscar {
+    width: 32px;
+    height: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
     border: none;
     position: absolute;
-    left: 5px;
+    left: 6px;
     color: #5E39B1;
     cursor: pointer;
-    font-size: 1.1rem;
   }
 
   .close {

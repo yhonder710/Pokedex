@@ -20,7 +20,7 @@ export function CardPokemons({ pokemons }: Props) {
       </header>
       <img key={pokemons?.id} src={pokemons?.sprites.other?.['official-artwork'].front_default} alt="img pokemon" />
       <footer>
-        <h3>{pokemons?.name}</h3>
+        <span>{pokemons?.name}</span>
       </footer>
     </article>
   );

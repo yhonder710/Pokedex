@@ -17,20 +17,23 @@
     height: 150px;
   }
 
-  h3 {
-    margin: 0;
-    color: #5E39B1;
-    font-weight: bold;
-    width: 100%;
-    max-width: 150px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    text-align: center;
-  }
+
 
   footer {
     height: 20px;
+
+    span {
+      margin: 0;
+      color: #5E39B1;
+      font-weight: bold;
+      width: 100%;
+      max-width: 150px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: center;
+      font-size: 1.3rem;
+    }
   }
 
   .cardInfor {
