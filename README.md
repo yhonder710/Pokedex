@@ -1,5 +1,5 @@
-# Pokedex
+# Pokedex React con Infinity Scroll y Búsqueda Avanzada
 
-- esta es la url de pokeapi q se va usar "https://pokeapi.co/api/v2/pokemon?offset=20&limit=20"
+Esta aplicación es una Pokedex interactiva desarrollada con React + TypeScript que consume datos de la PokeAPI. Implementa un infinity scroll automático usando TanStack Query para cargar progresivamente los Pokémon, optimizando el rendimiento con paginación bajo demanda. Incluye un buscador por nombre con filtrado en tiempo real y un modo oscuro/claro gestionado con Zustand para almacenar la preferencia del usuario. La interfaz está construida con CSS puro para mantenerla ligera y personalizable. 🔗 Disponible en: 7102.netlify.app.
 
-Plataforma de Series TV es una aplicación web desarrollada con React, TypeScript y Tailwind CSS que consume la API pública de TVMaze para mostrar un catálogo completo de series de televisión. Utiliza TanStack Query para gestionar eficientemente la obtención y el caching de datos, y Zustand para manejar el estado global de la aplicación. La interfaz, diseñada con CSS Modules, es responsive y ofrece una navegación intuitiva, permitiendo a los usuarios explorar información detallada de diversas series. Esta demo combina tecnologías modernas de frontend para crear una experiencia de usuario fluida y optimizada. 🔗 Visítala aquí: 71022.netlify.app.
+(Tecnologías: React, TypeScript, CSS, Zustand, TanStack Query, PokeAPI)
