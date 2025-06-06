@@ -71,7 +71,7 @@ form {
 @media (max-width: 450px) {
   form {
     input {
-      width: 180px;
+      width: 170px;
       font-size: 14px;
       height: 24px;
     }
