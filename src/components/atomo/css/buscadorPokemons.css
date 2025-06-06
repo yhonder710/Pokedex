@@ -27,6 +27,8 @@ form {
   }
 
 
+
+
   .buscar {
     width: 32px;
     height: 32px;
@@ -36,7 +38,7 @@ form {
     background-color: transparent;
     border: none;
     position: absolute;
-    left: 6px;
+    left: 3px;
     color: #5E39B1;
     cursor: pointer;
   }
@@ -52,5 +54,26 @@ form {
     color: #5E39B1;
     cursor: pointer;
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  form {
+    input {
+      width: 200px;
+      font-size: 16px;
+      height: 24px;
+    }
+  }
+}
+
+
+@media (max-width: 450px) {
+  form {
+    input {
+      width: 180px;
+      font-size: 14px;
+      height: 24px;
+    }
   }
 }

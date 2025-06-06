@@ -2,12 +2,15 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 10px 0px;
-  padding-right: 15px;
+  justify-content: center;
+  padding: 20px 0px;
+  padding-right: 10px;
   box-sizing: border-box;
   width: 100%;
   gap: 20px;
 }
+
+
 
 .containerListPokemons {
   display: flex;

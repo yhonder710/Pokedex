@@ -10,6 +10,7 @@
   transition: 500ms;
 }
 
+
 .icon {
   display: flex;
   align-items: center;
@@ -22,4 +23,10 @@
 .icon.on {
   transform: translateX(0px);
   color: #5E39B1;
+}
+
+@media (max-width: 450px) {
+  .btnTema {
+    width: 60px;
+  }
 }
