@@ -17,7 +17,6 @@
   transform: translateX(48px);
   color: #5E39B1;
   transition: 300ms;
-
 }
 
 .icon.on {
@@ -28,5 +27,13 @@
 @media (max-width: 450px) {
   .btnTema {
     width: 60px;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    transform: translateX(22px);
+    color: #5E39B1;
+    transition: 300ms;
   }
 }
